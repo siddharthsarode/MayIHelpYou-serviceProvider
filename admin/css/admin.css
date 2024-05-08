@@ -1,0 +1,1202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+
+    --blue: #0d6efd;
+    --purple: #6f42c1;
+    --pink: #d63384;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #198754;
+    --gray-dark: #343a40;
+    --cyan: #0dcaf0;
+    --text: #6c757d;
+    --dark: #212529;
+    --light: #fff;
+    --heading: #3E3232;
+    --body: #fafafa;
+    --radius: .5rem;
+    --dashBackground: rgb(230, 229, 229);
+    --shadow: box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+
+body {
+    width: 100%;
+    height: 100%;
+    background: var(--body);
+}
+
+::-webkit-scrollbar {
+    width: 1.5rem;
+}
+
+
+::-webkit-scrollbar-thumb {
+    display: none;
+    /* background-color: var(--gray-dark);
+    border-radius: 1rem;
+    border: .5rem solid transparent;
+    background-clip: content-box; */
+}
+
+/* By Default CSS style Start*/
+
+.center {
+    text-align: center;
+}
+
+.pad-x {
+    padding: 0 4rem;
+}
+
+.pad-y {
+    padding: 2.5rem 0;
+}
+
+.pad-right {
+    padding: 0 2.5rem;
+}
+
+.shadow {
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+}
+
+.heading {
+    font-size: 3.5rem;
+    color: var(--heading);
+}
+
+.icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.form-label {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--gray-dark);
+    display: block;
+    padding: .5rem 0;
+    letter-spacing: 1px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--gray-dark);
+    border-radius: .5rem;
+    outline: none;
+    margin: .5rem 0;
+    transition: all .2s linear;
+}
+
+.form-input:focus {
+    box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.299);
+}
+
+
+.button {
+    padding: .9rem .6rem;
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.form-line {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #310b0b14;
+    margin-top: 5rem;
+}
+
+.user-icon {
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.just-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+
+
+p {
+    font-size: 1.4rem;
+    color: var(--dark);
+    line-height: 1.5;
+    letter-spacing: .5px;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+select {
+    cursor: pointer;
+}
+
+/* By Default CSS style End*/
+
+/* Admin login section start here (Global CSS for all form elements) */
+.form-container {
+    margin-top: 5rem;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.page-title h1 {
+    font-weight: 600;
+    font-size: 5rem;
+}
+
+.page-title h1 span {
+    color: var(--green);
+}
+
+.text-area {
+    width: 100%;
+    height: 10rem;
+    resize: vertical;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid var(--dark);
+}
+
+.form-box {
+    width: 50rem;
+    margin: 1rem auto;
+    padding: 1rem 2rem 2rem 2rem;
+    border-radius: var(--radius);
+    background: var(--light);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Show error msg when user entered wrong data */
+.err-msg {
+    font-size: 1.3rem;
+    color: var(--red);
+    font-weight: 600;
+}
+
+/* Admin Login Div in form  */
+.form-heading {
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.form-box .form-heading .admin-img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.form-box .form-heading h3 {
+    text-transform: capitalize;
+    font-size: 2.5rem;
+    color: var(--gray-dark);
+}
+
+.form-box .form-element {
+    margin: 1.2rem 0;
+}
+
+/* .submit is class for buttons likes (login, sign-up) */
+.form-box .form-element .submit-btn {
+    background: var(--gray-dark);
+    color: var(--light);
+    margin-top: 2rem;
+    transition: all .2s ease-in;
+}
+
+.form-box .form-element .submit-btn:hover {
+    background-color: var(--dark);
+}
+
+.form-box .form-element span {
+    color: var(--dark);
+    font-size: 1.5rem;
+    margin-inline: 1rem;
+}
+
+.form-box .forgot-pass {
+    display: block;
+    float: right;
+    font-size: 13px;
+    color: var(--red);
+    margin: 1rem 0;
+}
+
+.form-box .sign-link {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.form-box .sign-link span {
+    color: var(--text);
+    font-size: 1.4rem;
+    margin-right: .5rem;
+}
+
+.form-box .sign-link a {
+    font-size: 1.4rem;
+    color: var(--blue);
+}
+
+.form-box form .service-response {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-box form .service-response #response {
+    color: var(--dark);
+    font-size: 2rem;
+}
+
+
+/* Admin login section End here */
+
+/* Add service section start here (siddharth) */
+#add-service .form-box {
+    width: 65rem;
+}
+
+#add-service .heading {
+    font-size: 3rem;
+    color: var(--gray-dark);
+}
+
+.form-input-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1rem;
+}
+
+#add-service .text-area {
+    height: 6rem;
+}
+
+::-webkit-file-upload-button {
+    border: none;
+    outline: none;
+    border-radius: var(--radius);
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    background: var(--orange);
+    color: #fff;
+    cursor: pointer;
+
+}
+
+/* Add service section End here (siddharth) */
+/* --------- Dashboard ---------- */
+
+.wrapper {
+    width: 100%;
+    /* height: 100vh; */
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 18% auto;
+}
+
+.wrapper aside {
+    padding: 1rem 0 1rem 2rem;
+    display: inline-block;
+    color: var(--bg-light);
+    background: var(--dark);
+}
+
+
+
+.wrapper aside .logo {
+    font-size: 2.5rem;
+    font-weight: 600;
+    height: 6rem;
+    width: 7.5rem;
+    padding: 1rem 0;
+    margin: 0 0 3rem 0;
+}
+
+.hide-sidebar {
+    margin: 0 25rem 0 -30rem;
+    background-color: var(--light);
+    z-index: -1;
+}
+
+.wrapper aside .links {
+    padding: 1rem 0;
+
+}
+
+.wrapper aside .links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.wrapper aside .links ul li a {
+    display: inline-block;
+    padding: .7rem 0;
+    color: var(--cyan);
+    font-size: 1.6rem;
+    transition: all .2s ease;
+}
+
+.wrapper aside .links ul li .log-out {
+    height: 3.5rem;
+    width: 7rem;
+    text-align: center;
+    border: 2px solid var(--red);
+    border-radius: 4px;
+    background-color: var(--red);
+    color: var(--light);
+    font-size: 1.5rem;
+}
+
+.wrapper aside .links ul li .log-out:hover {
+    background-color: var(--dark);
+    color: var(--red);
+}
+
+.wrapper aside .links ul li a:hover {
+    opacity: 0.8;
+}
+
+.wrapper aside .links ul li a i {
+    display: inline-block;
+    margin-right: .7rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .3rem 2rem;
+    background: var(--light);
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav .search {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+nav .search i {
+    font-size: 1.6rem;
+    color: var(--dark);
+    padding-right: 1rem;
+}
+
+nav .search i img {
+    height: 2.5rem;
+}
+
+nav .search input {
+    width: 100%;
+    padding: 1.5rem 0 !important;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+/* nav .navbar-right i {
+    font-size: 1.5rem;
+    padding: 0 .3rem;
+    cursor: pointer;
+    color: var(--gray-dark);
+} */
+nav .navbar-right {
+    margin: 1.5rem 0 1.5rem 0;
+}
+
+nav .navbar-right .admin-nav-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav .navbar-right .admin-nav-icons img {
+    height: 2.5rem;
+}
+
+/* nav .navbar-right a{
+  height: 3rem;
+  width: 4rem;
+  border: 2px solid var(--green);
+  background-color: var(--green);
+  font-size: 1.5rem;
+  color: var(--light);
+  border-radius: 4px;
+  padding: 1rem;
+  transition: all .5s ease;
+} */
+
+nav .navbar-right a:hover {
+    background-color: var(--light);
+    color: var(--green);
+}
+
+.dash-container {
+    padding: 0 2rem;
+}
+
+.dash-container .heading {
+    font-size: 3rem;
+    padding: 2rem;
+}
+
+.dash-container .box-con {
+    display: flex;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    /* justify-content: center; */
+}
+
+.dashboard {
+    background-color: var(--dashBackground);
+    transition: all 1s ease;
+}
+
+.full-display {
+    width: 121%;
+    position: relative;
+    left: -25rem;
+}
+
+
+/* After click admin box show this table */
+
+.dash-container #show table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Table header */
+.dash-container #show th {
+    color: #fff;
+    /* White text color */
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.dash-container #show table .thead-4 tr th {
+    background-color: var(--yellow);
+}
+
+.dash-container #show table .thead-1 tr th {
+    background-color: var(--blue);
+}
+
+.dash-container #show table .thead-3 tr th {
+    background-color: var(--green);
+}
+
+.dash-container #show table .thead-2 tr th {
+    background-color: var(--orange);
+}
+
+/* Table body */
+.dash-container #show td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    color: var(--dark);
+    background-color: #f8f9fa;
+    /* Light background color for td */
+}
+
+/* Alternate row color */
+.dash-container #show tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect */
+.dash-container #show tr:hover td {
+    background-color: #cce5ff;
+    /* Light blue color on hover */
+}
+
+/* No users found message */
+.dash-container #show .no-users {
+    font-style: italic;
+    color: #999;
+}
+
+.dash-container .box-con .box {
+    width: 22%;
+    height: 13rem;
+    border-radius: 2rem;
+    color: var(--light);
+    background: red;
+    padding: 1.5rem;
+    cursor: pointer;
+}
+
+.dash-container .box-con .box:nth-child(1) {
+    background: var(--blue);
+}
+
+
+.dash-container .box-con .box:nth-child(2) {
+    background: var(--orange);
+}
+
+
+
+.dash-container .box-con .box:nth-child(3) {
+    background: var(--green);
+}
+
+
+
+.dash-container .box-con .box:nth-child(4) {
+    background: var(--yellow);
+}
+
+
+
+.dash-container .box-con .box .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+}
+
+.dash-container .box-con .box .text h2,
+.dash-container .box-con .box .text i {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.dash-container .box-con .box .numbers {
+    margin-top: 3rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.dash-container .info-con {
+    width: 100%;
+    height: 27rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.dash-content-heading {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#show .head-1 {
+    color: var(--blue);
+}
+
+#show .head-2 {
+    color: var(--orange);
+}
+
+#show .head-3 {
+    color: var(--green);
+}
+
+#show .head-4 {
+    color: var(--yellow);
+}
+
+.dash-container .info-con .left {
+    padding: 2.5rem 2rem;
+    border-radius: .8rem;
+    background: var(--light);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dash-container .info-con .left h2 {
+    padding: 1rem 0;
+    font-size: 2rem;
+}
+
+.dash-container .info-con .left button {
+    padding: 1rem 2.5rem;
+    border-radius: 10rem;
+    margin-top: 2rem;
+    background: var(--purple);
+    color: var(--bg-light);
+}
+
+.dash-container .info-con .right {
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.dash-container .info-con .right .box .icon-back {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    color: var(--light);
+}
+
+.bg-yellow,
+.color-yellow {
+    background: var(--yellow);
+}
+
+.bg-blue,
+.color-blue {
+    background: var(--blue);
+}
+
+.bg-orange,
+.color-orange {
+    background: var(--orange);
+}
+
+.bg-green,
+.color-green {
+    background: var(--green);
+}
+
+.dash-container .info-con .right .icon-back i {
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.dash-container .info-con .right .box .num {
+    padding: .5rem 0;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    font-weight: 600;
+}
+
+/*Employee dashboard section start here*/
+header .head {
+    display: flex;
+    background-color: var(--dark);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header .head .navbar-section {
+    display: flex;
+    width: 100%;
+}
+
+header .head .navbar-section .logo-img {
+    height: 6rem;
+    width: 7rem;
+    margin: .5rem 1rem 2rem 2rem;
+}
+
+header .head .navbar-section .nav-links {
+    width: 40rem;
+    margin: 1rem 0 0 35rem;
+}
+
+header .head .navbar-section .nav-links ul {
+    display: flex;
+}
+
+header .head .navbar-section .nav-links ul li {
+    margin: 2rem;
+    font-size: 2rem;
+}
+
+header .head .navbar-section .nav-links ul li a {
+    color: var(--light);
+}
+
+header .head .navbar-section .nav-links ul li a:hover {
+    color: var(--blue);
+}
+
+header .head .navbar-section .nav-btn {
+    position: relative;
+    left: 20%;
+    top: 3rem;
+}
+
+header .head .navbar-section .nav-btn a {
+    color: var(--light);
+    font-size: 1.5rem;
+    background-color: var(--red);
+    height: 3rem;
+    width: 8rem;
+    border: 2px solid var(--red);
+    padding: 1rem;
+    margin: 1rem 0 0 3rem;
+    border-radius: .5rem;
+    transition: all .5s ease;
+
+}
+
+header .head .navbar-section .nav-btn .profile {
+    background-color: var(--blue);
+    border: 2px solid var(--blue);
+}
+
+header .head .navbar-section .nav-btn .profile:hover {
+    background-color: var(--light);
+    color: var(--blue);
+}
+
+header .head .navbar-section .nav-btn .logout:hover {
+    background-color: var(--light);
+    color: var(--red);
+}
+
+#admin-container {
+    display: flex;
+}
+
+#admin-container .side-section .side-container {
+    position: relative;
+    top: 0;
+    left: 1.5rem;
+    height: auto;
+    width: 30rem;
+    background-color: var(--gray-dark);
+    box-shadow: 1px 1px 6px var(--gray-dark);
+    /* background-color: red; */
+}
+
+#admin-container .side-section .side-container .side-header .admin-logo {
+    margin: 2rem 0 2rem 0;
+    background-color: var(--dark);
+    padding: 1rem;
+    display: flex;
+}
+
+#admin-container .side-section .side-container .side-header .admin-logo .img {
+    height: 5rem;
+    width: 5rem;
+    padding: .5rem;
+}
+
+#admin-container .side-section .side-container .side-header .admin-logo .admin-profile {
+    margin: 1rem 0 0 2rem;
+}
+
+#admin-container .side-section .side-container .side-header .admin-logo .admin-profile span {
+
+    color: var(--light);
+    font-size: 2rem;
+}
+
+#admin-container .side-section .side-container .side-header .admin-operations {
+    background-color: var(--dark);
+    display: block;
+}
+
+#admin-container .side-section .side-container .side-header .admin-operations .content {
+    margin: 3rem 0 0 1rem;
+}
+
+#admin-container .side-section .side-container .side-header .admin-operations .content .header {
+    margin: 3rem 0 0 0;
+    padding: 2rem 0 1rem 1rem;
+}
+
+#admin-container .side-section .side-container .side-header .admin-operations .content .header span {
+    color: var(--light);
+    font-size: 2rem;
+}
+
+#admin-container .side-section .side-container .side-header .admin-operations .content .sub-operation {
+    margin-right: 1rem;
+}
+
+#admin-container .side-section .side-container .side-header .admin-operations .content .sub-operation ul li {
+    margin: 1rem 0 0 0;
+    padding: 1rem 0 1rem 2rem;
+}
+
+#admin-container .side-section .side-container .side-header .admin-operations .content .sub-operation ul li a {
+    font-size: 1.5rem;
+    color: var(--light);
+
+}
+
+#admin-container .side-section .side-container .side-header .admin-operations .content .sub-operation ul li:hover {
+    background-color: rgb(107, 106, 106);
+    cursor: pointer;
+}
+
+#admin-container #main-section {
+    position: relative;
+    left: 3rem;
+    width: 73%;
+    top: 2rem;
+    background-color: var(--dark);
+    bottom: 5rem;
+    height: 92rem;
+    padding: 1rem;
+    overflow: scroll;
+}
+
+/*admin section ends here*/
+
+/*Employee Report section start here*/
+#hidden-images-profile,
+#hidden-images-adhar,
+#hidden-images-pan {
+    display: none;
+}
+
+/*Employee update style start here( _empUpdate.php)*/
+
+#table {
+    position: fixed;
+    display: none;
+    top: 5rem;
+    left: 8rem;
+    right: 8rem;
+    padding: 3rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px var(--gray-dark);
+    user-select: none;
+    background-color: var(--light);
+    transition: all 1s ease;
+}
+
+#table .head {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 2rem 0;
+}
+
+.close-img {
+    height: 1.5rem;
+    width: 1.5rem;
+    float: right;
+    margin: -2rem 0 0 3rem;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.close-img:hover {
+    rotate: 90deg;
+}
+
+#table .head h1 {
+    color: var(--dark);
+    text-transform: uppercase;
+    word-spacing: 1rem;
+    font-size: 3rem;
+}
+
+#table .content .table-box {
+    margin: 2rem 0 2rem 0;
+}
+
+#table .content .table-box table tr th,
+td {
+    padding: 0 .5rem 0 .5rem;
+    background-color: var(--dark);
+    color: var(--light);
+    font-size: 1.5rem;
+    border: 1px solid var(--dark);
+}
+
+#table .content .table-box table {
+    width: 100%;
+    margin: 0 1rem 0 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#table .content .table-box table tr td {
+    background-color: var(--light);
+    color: var(--dark);
+    border: 1px solid var(--dark);
+}
+
+#table .content .table-box table tr .empId {
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+}
+
+#table .content .table-box table tr td button {
+    color: var(--light);
+    text-transform: uppercase;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 1px solid var(--blue);
+    background-color: var(--blue);
+}
+
+.operation-btn {
+    margin-top: 2rem;
+    height: 5rem;
+    width: 10rem;
+    border: 2px solid var(--blue);
+    border-radius: .5rem;
+    color: var(--light);
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: var(--blue);
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: all .5s ease;
+}
+
+.operation-btn:hover {
+    background-color: var(--light);
+    color: var(--blue);
+}
+
+.employee-operations {
+    float: right;
+    display: block;
+    width: 10%;
+    height: auto;
+    position: relative;
+    top: -5rem;
+    right: -1rem;
+}
+
+/* employee update style ends here*/
+
+
+/*receivedOrders.php style start here*/
+.table-container {
+    position: absolute;
+    top: 5rem;
+    left: 27rem;
+    width: 75%;
+    height: auto;
+    padding: 2rem 0 2rem 0;
+}
+
+.table-container .table-content {
+    width: 105%;
+}
+
+.table-container .table-content .header {
+    display: flex;
+    gap: 15%;
+    margin: 2rem 0 3rem 0;
+}
+
+.table-container .table-content .header h1 {
+    color: var(--dark);
+    font: 400;
+    padding: 0 2rem 0 0;
+    font-size: 2.5rem;
+    width: 50rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    word-spacing: 1rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+}
+
+.table-container .table-content .header input {
+    width: 75%;
+    height: 3rem;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--dark);
+    background-color: var(--dashBackground);
+}
+
+.table-container .table-content .header input:focus {
+    border-bottom: 2px solid var(--blue);
+}
+
+.table-container .table-content .table-data .table {
+    height: 100vh;
+    width: 100%;
+    overflow: scroll;
+}
+
+.table-container .table-content .table-data .table table {
+    height: auto;
+    width: 100%;
+    background-color: var(--light);
+    text-align: center;
+}
+
+.table-container .table-content .table-data .table table tr th {
+    padding: .5rem 1rem .5rem 1rem;
+    background-color: var(--dark);
+    text-transform: uppercase;
+    color: var(--light);
+    font-size: 1.5rem;
+}
+
+.table-container .table-content .table-data .table table tr td {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.table-container .table-content .table-data .table table tr td .accept-order-btn,
+.reject-order-btn {
+    padding: 1.5rem;
+    margin: -1rem -1rem;
+    color: var(--light);
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-width: 2px;
+    border-radius: 4px;
+    letter-spacing: .1rem;
+    cursor: pointer;
+    transition: all .7s ease;
+}
+
+.table-container .table-content .table-data .table table tr td .accept-order-btn {
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
+
+.table-container .table-content .table-data .table table tr td .reject-order-btn {
+    background-color: var(--orange);
+    border-color: var(--orange);
+}
+
+.table-container .table-content .table-data .table table tr td .accept-order-btn:hover {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.table-container .table-content .table-data .table table tr td .reject-order-btn:hover {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.received-order-container {
+    position: fixed;
+    top: -12%;
+    left: -20%;
+    right: -30%;
+    padding: 10rem 17rem 20rem 10rem;
+    backdrop-filter: blur(2px);
+    user-select: none;
+    display: none;
+}
+
+#close-img {
+    position: relative;
+    top: -2.5rem;
+    cursor: pointer;
+    height: 1.5rem;
+    width: 1.5rem;
+    transition: all .5s ease;
+}
+
+#close-img:hover {
+    rotate: 90deg;
+}
+
+.image-list {
+    position: relative;
+    left: 25%;
+    right: 25%;
+    top: 15%;
+    width: 50%;
+    padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+    background-color: var(--light);
+}
+
+/*employee report style start here */
+
+/*footer section start here*/
+footer {
+    /* position: fixed;
+    bottom: 0rem; */
+    width: 100%;
+    height: 6rem;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--dark);
+    z-index: 999;
+}
+
+footer .logo-text h2 {
+    font-size: 2.5rem;
+    color: var(--light);
+}
+
+footer .logo-text h2 span {
+    color: var(--orange);
+}
+
+footer .copyright p {
+    color: var(--cyan);
+}
+
+footer .copyright {
+    margin: 0 25rem 0 0;
+}
+
+
+/* Emp Registration page css */
+
+#emp-add .form-box {
+    width: 100%;
+}
+
+/* Custom Table style */
